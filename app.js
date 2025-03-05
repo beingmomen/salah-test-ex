@@ -17,6 +17,7 @@ const categoryRouter = require('./routes/categoryRoutes');
 const departmentRouter = require('./routes/departmentRoutes');
 const locationRouter = require('./routes/locationRoutes');
 const levelRouter = require('./routes/levelRoutes');
+const jobRouter = require('./routes/jobRoutes');
 
 const app = express();
 
@@ -99,6 +100,7 @@ app.use('/api/v1/categories', categoryRouter);
 app.use('/api/v1/departments', departmentRouter);
 app.use('/api/v1/locations', locationRouter);
 app.use('/api/v1/levels', levelRouter);
+app.use('/api/v1/jobs', jobRouter);
 
 app.post('/api/v1/logout', (req, res) => {
   res.send('Done');

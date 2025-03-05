@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +14,20 @@
             padding: 20px;
             background-color: #f5f5f5;
         }
+
         .container {
             background-color: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             color: #333;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
         }
+
         .endpoint {
             background-color: #f8f9fa;
             padding: 15px;
@@ -31,17 +35,20 @@
             border-radius: 4px;
             border-left: 4px solid #007bff;
         }
+
         code {
             background-color: #e9ecef;
             padding: 2px 4px;
             border-radius: 4px;
             font-family: monospace;
         }
+
         .endpoint-item {
             display: flex;
             align-items: center;
             margin: 8px 0;
         }
+
         .endpoint-button {
             background-color: #007bff;
             color: white;
@@ -53,19 +60,22 @@
             font-size: 14px;
             transition: background-color 0.2s;
         }
+
         .endpoint-button:hover {
             background-color: #0056b3;
         }
+
         .endpoint-description {
             flex: 1;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Express API Service</h1>
         <p>Welcome to the Express API Service. Below are the available endpoints:</p>
-        
+
         <div class="endpoint">
             <h3>Users API</h3>
             <p>Base URL: <code>/api/v1/users</code></p>
@@ -88,12 +98,81 @@
             <ul>
                 <li class="endpoint-item">
                     <span class="endpoint-description">GET <code>/api/v1/categories</code> - Get all categories</span>
-                    <button class="endpoint-button" onclick="window.open('/api/v1/categories', '_blank')">Try it</button>
+                    <button class="endpoint-button" onclick="window.open('/api/v1/categories', '_blank')">Try
+                        it</button>
                 </li>
                 <li>POST <code>/api/v1/categories</code> - Create a new category</li>
                 <li class="endpoint-item">
-                    <span class="endpoint-description">GET <code>/api/v1/categories/:id</code> - Get category by ID</span>
+                    <span class="endpoint-description">GET <code>/api/v1/categories/:id</code> - Get category by
+                        ID</span>
                     <button class="endpoint-button" onclick="tryGetById('/api/v1/categories')">Try it</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="endpoint">
+            <h3>Departments API</h3>
+            <p>Base URL: <code>/api/v1/departments</code></p>
+            <ul>
+                <li class="endpoint-item">
+                    <span class="endpoint-description">GET <code>/api/v1/departments</code> - Get all departments</span>
+                    <button class="endpoint-button" onclick="window.open('/api/v1/departments', '_blank')">Try
+                        it</button>
+                </li>
+                <li>POST <code>/api/v1/departments</code> - Create a new department</li>
+                <li class="endpoint-item">
+                    <span class="endpoint-description">GET <code>/api/v1/departments/:id</code> - Get department by
+                        ID</span>
+                    <button class="endpoint-button" onclick="tryGetById('/api/v1/departments')">Try it</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="endpoint">
+            <h3>Locations API</h3>
+            <p>Base URL: <code>/api/v1/locations</code></p>
+            <ul>
+                <li class="endpoint-item">
+                    <span class="endpoint-description">GET <code>/api/v1/locations</code> - Get all locations</span>
+                    <button class="endpoint-button" onclick="window.open('/api/v1/locations', '_blank')">Try it</button>
+                </li>
+                <li>POST <code>/api/v1/locations</code> - Create a new location</li>
+                <li class="endpoint-item">
+                    <span class="endpoint-description">GET <code>/api/v1/locations/:id</code> - Get location by
+                        ID</span>
+                    <button class="endpoint-button" onclick="tryGetById('/api/v1/locations')">Try it</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="endpoint">
+            <h3>Levels API</h3>
+            <p>Base URL: <code>/api/v1/levels</code></p>
+            <ul>
+                <li class="endpoint-item">
+                    <span class="endpoint-description">GET <code>/api/v1/levels</code> - Get all levels</span>
+                    <button class="endpoint-button" onclick="window.open('/api/v1/levels', '_blank')">Try it</button>
+                </li>
+                <li>POST <code>/api/v1/levels</code> - Create a new level</li>
+                <li class="endpoint-item">
+                    <span class="endpoint-description">GET <code>/api/v1/levels/:id</code> - Get level by ID</span>
+                    <button class="endpoint-button" onclick="tryGetById('/api/v1/levels')">Try it</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="endpoint">
+            <h3>Jobs API</h3>
+            <p>Base URL: <code>/api/v1/jobs</code></p>
+            <ul>
+                <li class="endpoint-item">
+                    <span class="endpoint-description">GET <code>/api/v1/jobs</code> - Get all jobs</span>
+                    <button class="endpoint-button" onclick="window.open('/api/v1/jobs', '_blank')">Try it</button>
+                </li>
+                <li>POST <code>/api/v1/jobs</code> - Create a new job</li>
+                <li class="endpoint-item">
+                    <span class="endpoint-description">GET <code>/api/v1/jobs/:id</code> - Get job by ID</span>
+                    <button class="endpoint-button" onclick="tryGetById('/api/v1/jobs')">Try it</button>
                 </li>
             </ul>
         </div>
@@ -110,4 +189,5 @@
         }
     </script>
 </body>
+
 </html>
