@@ -1,5 +1,5 @@
 const express = require('express');
-const controller = require('../controllers/_categoryController');
+const controller = require('../controllers/_jobController');
 const authController = require('../controllers/authController');
 
 const router = express.Router();
@@ -10,8 +10,6 @@ router
   .post(
     authController.protect,
     authController.restrictTo(['admin', 'dev']),
-    controller.uploadImages,
-    controller.processImages,
     controller.createOne
   );
 
@@ -30,8 +28,6 @@ router
   .patch(
     authController.protect,
     authController.restrictTo(['admin', 'dev']),
-    controller.uploadImages,
-    controller.processImages,
     controller.updateOne
   )
   .delete(
