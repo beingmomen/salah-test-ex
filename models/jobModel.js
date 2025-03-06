@@ -82,6 +82,27 @@ schema.pre('findOneAndUpdate', function(next) {
   next();
 });
 
+schema.virtual('locationData', {
+  ref: 'Location',
+  localField: 'location',
+  foreignField: '_id',
+  justOne: true
+});
+
+schema.virtual('departmentData', {
+  ref: 'Department',
+  localField: 'department',
+  foreignField: '_id',
+  justOne: true
+});
+
+schema.virtual('levelData', {
+  ref: 'Level',
+  localField: 'level',
+  foreignField: '_id',
+  justOne: true
+});
+
 schema.plugin(counterPlugin);
 
 const Job = mongoose.model('Job', schema);

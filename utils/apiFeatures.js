@@ -23,6 +23,7 @@ class APIFeatures {
     if (this.queryString.search) {
       const { search } = this.queryString;
 
+
       // Specify the fields to search on
       const fields = ['name', 'number', 'email'];
 
